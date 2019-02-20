@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Travelers Estimator</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/css/mdb.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container-fluid">
+        <main class="container-fluid">
+
+            <h1>Estimating the number of travellers.</h1>
+
+            <p>Enter number of People per Car:
+                <input id="PeoplePerCar" type="number">
+            </p>
+
+            <p>Enter number of Cars:
+                <input id="cars" type="number">
+            </p>
+
+            <button id="clicker" class="btn btn-primary" onclick="noOfPeople(PeoplePerCar,cars)" onchange="noOfPeople(Peoplepercar,cars)">Submit</button>
+
+            <p id="result"><span id="result"></span></p>
+        </main>
+        <script>
+            console.log('SCRIPT START')
+            console.log('Declare testable functions.....................')
+            function noOfPeople(x, y) {
+                return x * y;
+            }
+            document.getElementById('clicker').addEventListener('click', function () {
+
+                const i = parseInt(document.getElementById('PeoplePerCar').value)
+                console.log('i=' + i)
+                const j = parseInt(document.getElementById('cars').value)
+                console.log('j=' + j)
+                const ans ='Total number of people: ' + noOfPeople(i, j) + '.';
+                document.getElementById('result').innerHTML = ans;
+            })
+            console.log('SCRIPT END')
+        </script>
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.2.1/js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.7.3/js/mdb.min.js"></script>
+
+</body>
+
+</html>
